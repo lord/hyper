@@ -49,6 +49,10 @@ impl Response {
     /// Get the HTTP version of this response from the server.
     #[inline]
     pub fn version(&self) -> &version::HttpVersion { &self.version }
+
+    pub fn body(self) -> ::futures::stream::Receiver<::http::Chunk, ::Error> {
+        unimplemented!("Response::body")
+    }
 }
 
 /*
